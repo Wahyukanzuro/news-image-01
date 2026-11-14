@@ -8,7 +8,7 @@ def main():
     if not os.path.isfile(b64_path):
         b64_path = os.path.join(os.getcwd(), "image.b64")
     if not os.path.isfile(b64_path):
-        raise SystemExit("image.b64 not found next to main.py or in the working directory")
+        raise SystemExit("image.b64 not found next to main.py or in the cwd")
     with open(b64_path) as fh:
         data = fh.read().strip()
     raw = base64.b64decode(data)
